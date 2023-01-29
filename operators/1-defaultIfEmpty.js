@@ -46,4 +46,8 @@ observableFromEmpty$.pipe(defaultIfEmpty("DEFAULT_VALUE")).subscribe((value) => 
  * it mirrors the source observable.
  * It returns the values emitted by the source observable or a specified default value
  * if the source observable is empty.
+ *
+ * Use case:
+ * API call initially gives null when used with async pipe in angular
+ * use initial empty value for async pipe as undefined rather than null
  */
