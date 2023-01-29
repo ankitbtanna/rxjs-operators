@@ -1,8 +1,8 @@
-import { of, startWith } from "rxjs";
+import { endWith, of } from "rxjs";
 
 const fruits$ = of("Apple", "Banana", "Orange", "Grapes");
 
-fruits$.pipe(startWith("Starting to log fruits!")).subscribe((value) => {
+fruits$.pipe(endWith("All fruits logged!")).subscribe((value) => {
   console.log("###########################");
   console.log(value);
   console.log("###########################");
