@@ -9,10 +9,9 @@ dotenv.config({
   path: "../.env",
 });
 
+// const observable$ = from([2,4,6,8,10]);
 const observable$ = from([1, 2, 3, 4, 5]);
-
 const allEvens$ = observable$.pipe(every((value) => value % 2 === 0));
-
 allEvens$.subscribe((value) => {
   console.log("###########################");
   console.log(value);
