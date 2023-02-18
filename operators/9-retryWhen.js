@@ -20,3 +20,9 @@ source$
   .subscribe((value) => {
     console.log(value);
   });
+
+/**
+ * retryWhen can be used when an API throws an error and you want to retry the call
+ * It can be used to retry a call after a certain amount of time or based on error code
+ * 500 - You can retry, 401 - You shouldn't retry
+ */
