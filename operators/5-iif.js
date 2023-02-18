@@ -18,7 +18,11 @@ const allFruits$ = from([
 ]);
 
 allFruits$
-  .pipe(mergeMap((fruit) => iif(() => fruit.startsWith("A"), startsWithA$, notStartsWithA$)))
+  .pipe(
+    mergeMap((fruit) => {
+      return iif(() => fruit.startsWith("A"), startsWithA$, notStartsWithA$);
+    })
+  )
   .subscribe((value) => {
     console.log(value);
   });
