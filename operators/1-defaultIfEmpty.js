@@ -22,7 +22,7 @@ observableNotEmpty$.pipe(defaultIfEmpty("DEFAULT_VALUE")).subscribe((value) => {
 const observableUndefined$ = of(undefined);
 observableUndefined$.pipe(defaultIfEmpty("DEFAULT_VALUE")).subscribe((value) => {
   console.log("###########################");
-  console.log("does not set default value if observable is undefined");
+  console.log("does not set default value if observable is emitting an undefined value");
   console.log(value);
   console.log("###########################");
 });
